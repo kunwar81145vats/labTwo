@@ -89,15 +89,23 @@ class ArrayTools {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter string to encrypt. ");
 
-        String strValue = sc.nextLine();
-        System.out.println("Enter a value to encrypt with. ");
-
-        if (sc.hasNextInt())
+        if (sc.hasNextLine())
         {
-            int intValue = sc.nextInt();
-            encrypt(strValue, intValue);
+            String strValue = sc.nextLine();
+            System.out.println("Enter a value to encrypt with. ");
+
+            if (sc.hasNextInt())
+            {
+                int intValue = sc.nextInt();
+                encrypt(strValue, intValue);
+            }
+            else {
+                System.out.println("Invalid user input. Please try again.\n");
+                getInputToEncrypt();
+            }
         }
-        else {
+        else
+        {
             System.out.println("Invalid user input. Please try again.\n");
             getInputToEncrypt();
         }
