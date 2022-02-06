@@ -165,6 +165,8 @@ class ArrayTools {
     //Returns: true/false
     static void arrayContains(int[] arrInt)
     {
+      System.out.println("\nEnter the value to find in array: \n");
+
         Scanner sc = new Scanner(System.in);
         if (sc.hasNextInt())
         {
@@ -175,6 +177,7 @@ class ArrayTools {
                 if (arrInt[i] == value)
                 {
                     System.out.println("\nGiven array contains " + String.valueOf(value) + "\n\n");
+                    return;
                 }
             }
 
